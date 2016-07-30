@@ -1,2 +1,66 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<% if !user_signed_in? %>
+<style type="text/css">
+  body{
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+      ), url("/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  h1{
+    color: white;
+    font-weight: bold;
+  }
+  .container-index{
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  .text{
+    color: white;
+    font-weight: 300;
+    font-size: 150%;
+  }
+  .footer-links{
+    text-align: center;
+    color: white;
+    margin-top: 20%;
+  }
+  .log-in{
+    float: right;
+    width: 250px;
+    height: 100px;
+    margin-top: 10%;
+  }
+  .Sign-up{
+    float: right;
+    width: 250px;
+    height: 100px;
+  }
+</style>
+  <div class="container-index row">
+    <div class="col-sm-6">
+    <h1>Welcome to MentorBuddy!<br /><br /></h1>
+    <p class="text">
+      Connect with seniors. Chat with Mentors.<br />
+      Share your adventure. Have Fun<br />
+      A place to Learn, Earn and Grow!<br />
+    </p>
+    </div>
+    <div class="col-sm-6">
+      <div class="log-in panel">
+        Log-In
+      </div>
+      <div class="Sign-up panel">
+        Sign-up
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <p class="footer-links">About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  Info  Brand  Advertise  © 2016 MentorBuddy</p>
+    </div>
+  </div>
+<% else %>
+  <script>document.location = "/home"</script>
+<% end %>

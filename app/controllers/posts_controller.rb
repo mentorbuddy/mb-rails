@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       if (@post.save)
         f.html  {redirect_to "", notice: "Post created"}
       else
-        f.html {redirects_to "", notice: "Error: Post not saved"}
+        f.html {redirect_to "", notice: "Error: Post not saved"}
       end
     end
   end
